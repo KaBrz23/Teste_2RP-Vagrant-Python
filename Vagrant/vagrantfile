@@ -1,0 +1,10 @@
+Vagrant.configure("2") do |config|
+    config.vm.box = "centos/7" #máquina que será usada
+    config.disksize.size = "50GB" #quantidade HD
+    
+    config.vm.provider "virtualbox" do |v| #virtualbox provedor
+        v.memory = 4096 #quantidade de memória
+        v.cpus = 2 #número de cpus
+        v.name = "teste-zeppelin" #nome da máquina
+    end
+end
